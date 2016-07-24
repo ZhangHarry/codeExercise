@@ -40,9 +40,12 @@ public class ReplaceDemo2 {
     private static String REPLACE = "-";
  
     public static void main(String[] args) {
-        Pattern p = Pattern.compile(REGEX);
+//        Pattern p = Pattern.compile("(<\\w+>)|(</\\w+>)");
+        Pattern p = Pattern.compile("<(\\w+)>");
         // get a matcher object
-        Matcher m = p.matcher(INPUT);
+        Matcher m = p.matcher("<groupId>org.eclipse.core</groupId>");
+        if (m.find())
+            System.out.println(m.group());
         INPUT = m.replaceAll(REPLACE);
         System.out.println(INPUT);
     }
