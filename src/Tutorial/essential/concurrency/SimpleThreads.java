@@ -99,6 +99,9 @@ public class SimpleThreads {
             // for MessageLoop thread
             // to finish.
             t.join(1000);
+            Thread t1 = new Thread(new MessageLoop());
+            t1.start();
+            t1.join(1000);
             if (((System.currentTimeMillis() - startTime) > patience)
                   && t.isAlive()) {
                 threadMessage("Tired of waiting!");
