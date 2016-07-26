@@ -1,4 +1,4 @@
-package Regular;/*
+package Tutorial.essential.regex;/*
  * Copyright (c) 1995, 2008, Oracle and/or its affiliates. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -31,23 +31,24 @@ package Regular;/*
 
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
- 
-public class ReplaceDemo2 {
+
+public class RegexDemo {
  
     private static String REGEX = "a*b";
-    private static String INPUT =
-        "aabfooaabfooabfoob";
+    private static String INPUT = "aabfooaabfooabfoobfoo";
     private static String REPLACE = "-";
  
     public static void main(String[] args) {
-//        Pattern p = Pattern.compile("(<\\w+>)|(</\\w+>)");
-        Pattern p = Pattern.compile("<(\\w+)>");
-        // get a matcher object
-        Matcher m = p.matcher("<groupId>org.eclipse.core</groupId>");
-        if (m.find())
-            System.out.println(m.group());
-        INPUT = m.replaceAll(REPLACE);
-        System.out.println(INPUT);
+        Pattern p = Pattern.compile(REGEX);
+        Matcher m = p.matcher(INPUT); // get a matcher object
+        StringBuffer sb = new StringBuffer();
+        while(m.find()){
+            m.appendReplacement(sb,REPLACE);
+        }
+        System.out.println(sb.toString());
+        m.appendTail(sb);
+        System.out.println(sb.toString());
     }
 }
+
 

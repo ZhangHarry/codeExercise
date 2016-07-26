@@ -1,4 +1,4 @@
-package Regular;
+package Tutorial.essential.regex;
 
 import util.MvnJarInstaller;
 
