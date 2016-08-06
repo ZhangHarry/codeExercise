@@ -15,6 +15,7 @@ public class ImportVisitor extends ASTVisitor {
     private String packageName;
 
     boolean imports_ok = false;
+    boolean hasVisited = false;
 
     public ImportVisitor(){
         imports = new ArrayList<>();
@@ -24,7 +25,7 @@ public class ImportVisitor extends ASTVisitor {
     }
 
     public List<String> imports() {
-        if (!imports_ok){
+        if (hasVisited && !imports_ok){
             imports_ok = true;
             Set set = importsMap.entrySet();
             Iterator<Map.Entry> it = set.iterator();
@@ -36,25 +37,39 @@ public class ImportVisitor extends ASTVisitor {
         return imports;
     }
 
+    public List<String> getAllImports() {
+        return allImports;
+    }
+
     public String getPackageName() {
         return packageName;
     }
+
+    @Override
+    public void preVisit(ASTNode node) {
+        hasVisited = true;
+    }
+
+    @Override
     public boolean visit(ImportDeclaration node) {
         QualifiedName qualifiedName = (QualifiedName)node.getName();
         String name = qualifiedName.getName().toString();
         String qualifier = qualifiedName.getQualifier().toString();
-        if (name.equals("*"))
-            allImports.add(qualifier);
+        // if import xx.yy.*, qualifier is xx and name is yy while * is ignored
+        if (node.toString().contains("*"))
+            allImports.add(qualifier+"."+name);
         else
             importsMap.put(name, qualifier);
         return super.visit(node);
     }
 
+    @Override
     public boolean visit(PackageDeclaration node) {
         packageName = node.getName().toString();
         return super.visit(node);
     }
 
+    @Override
     public boolean visit(SimpleType node) {
         return super.visit(node);
     }

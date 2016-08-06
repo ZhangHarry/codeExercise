@@ -96,7 +96,7 @@ public class Analyzer {
 
     public static void main(String[] args){
         Analyzer analyzer = new Analyzer();
-        Map<String, List<String>> imports = analyzer.getImports("E:\\Java code\\codeExercise\\src\\util\\tool");
+        Map<String, List<String>> imports = analyzer.getImports("E:\\Java code\\codeExercise\\src\\util\\tool\\score\\ImportVisitor.java");
         imports.toString();
     }
 }
