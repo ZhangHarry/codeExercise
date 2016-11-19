@@ -75,7 +75,7 @@ public class Analyzer {
         String fileName = pickFileName(filePath);
         ASTParser parser = ASTParser.newParser(AST.JLS3);
         parser.setResolveBindings(true);
-        parser.setSource(Util.getSource(filePath).toCharArray());
+        parser.setSource(Util.getContent(filePath).toCharArray());
         parser.setKind(ASTParser.K_COMPILATION_UNIT);
         CompilationUnit result = (CompilationUnit) parser.createAST(null);
         ImportVisitor visitor = new ImportVisitor();

@@ -10,8 +10,13 @@ public class Test {
             String s = ""+i;
             map.put(s, s);
         }
-        map.put("3","3");
+        map.put("3", "3");
         map.remove("3");
         System.out.print("/t");
+        StringBuffer sb = new StringBuffer();
+        sb.append("");
+
+
+
     }
 }

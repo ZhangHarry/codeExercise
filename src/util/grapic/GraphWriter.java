@@ -1,6 +1,7 @@
-package Algorithm.util.graph;
+package util.grapic;
 
-import java.io.File;
+import util.CmdExecutor;
+
 import java.io.PrintWriter;
 import java.util.List;
 
@@ -37,13 +38,13 @@ public class GraphWriter {
             sb.append("}");
             out.print(sb);
             out.flush();
-            CmdExecute.execute("dot -Tpng " + filePath + " -o " + filePath + ".png");
         } catch (Exception e){
             e.printStackTrace();
         } finally {
             if (out != null){
                 out.close();
             }
+            CmdExecutor.exec("dot -Tpng " + filePath + " -o " + filePath + ".png");
         }
     }
 }

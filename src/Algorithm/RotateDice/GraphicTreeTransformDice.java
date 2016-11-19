@@ -1,9 +1,9 @@
 package Algorithm.RotateDice;
 
-import Algorithm.util.graph.Edge;
-import Algorithm.util.graph.Graph;
-import Algorithm.util.graph.GraphWriter;
-import Algorithm.util.graph.Node;
+import util.grapic.Edge;
+import util.grapic.Graph;
+import util.grapic.GraphWriter;
+import util.grapic.Node;
 
 import java.util.*;
 

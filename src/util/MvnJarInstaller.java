@@ -35,7 +35,7 @@ public class MvnJarInstaller {
         }
         sb.append(" -Dpackaging=jar");
         System.out.println(sb.toString());
-        CMDExector.exect(sb.toString());
+        CmdExecutor.exec(sb.toString());
     }
 
 

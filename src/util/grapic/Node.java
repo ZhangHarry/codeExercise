@@ -1,7 +1,8 @@
-package Algorithm.util.graph;
+package util.grapic;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Optional;
 
 /**
  * Created by Zhanghr on 2016/5/25.
@@ -9,10 +10,10 @@ import java.util.Collection;
 public class Node<S> {
     private Collection<Edge> edges = new ArrayList<>();
 
-    private S symbol;
+    private Optional<S> symbol;
 
-    public Node(S sym){
-        this.symbol = sym;
+    public Node(S symbol){
+        this.symbol = Optional.ofNullable(symbol);
     }
 
     public Collection<Edge> getEdges() {
@@ -20,11 +21,11 @@ public class Node<S> {
     }
 
     public S getSymbol() {
-        return symbol;
+        return symbol.get();
     }
 
     public void setSymbol(S symbol) {
-        this.symbol = symbol;
+        this.symbol = Optional.ofNullable(symbol);
     }
 
     public void addEdge(Edge edge){
@@ -36,6 +37,8 @@ public class Node<S> {
     }
 
     public String toString(){
-        return symbol.toString();
+        if (symbol.isPresent())
+            return symbol.get().toString();
+        return "";
     }
 }

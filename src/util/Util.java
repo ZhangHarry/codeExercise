@@ -6,7 +6,12 @@ import java.io.*;
  * Created by zhanghr on 2016/8/6.
  */
 public class Util {
-    public static String getSource(String fileName)
+    /**
+     *
+     * @param fileName
+     * @return content string of file
+     */
+    public static String getContent(String fileName)
     {
         File file = new File(fileName);
         BufferedReader reader = null;
@@ -15,7 +20,7 @@ public class Util {
             reader = new BufferedReader(new FileReader(file));
             String tempString = null;
             while ((tempString = reader.readLine()) != null) {
-                sb.append(tempString);
+                sb.append(tempString+"\n");
             }
         } catch (IOException e) {
             e.printStackTrace();
