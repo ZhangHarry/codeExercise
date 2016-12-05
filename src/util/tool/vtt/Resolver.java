@@ -1,6 +1,6 @@
 package util.tool.vtt;
 
-import util.Util;
+import util.FileProcesser;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ public class Resolver {
             System.exit(-1);
         }
         List<Substitle> substitles = new ArrayList<>();
-        String[] substitleItems = Util.getContent(path).split("\n\n");
+        String[] substitleItems = FileProcesser.getContent(path).split("\n\n");
         if (!"WEBVTT".equalsIgnoreCase(substitleItems[0])){
             System.err.format("error file form : %s", "file doesn't begin with WEBVTT");
             System.exit(-1);

@@ -1,4 +1,4 @@
-package Algorithm.DynamicProgramming.LCS;
+package Algorithm.dynamicProgramming.LCS;
 
 import java.util.List;
 
@@ -89,7 +89,8 @@ public class LCS_A<T extends Comparable> {
     }
 
     public Grid[][] getLcsArray() {
-        init();
+        if (lcsArray == null)
+            getLCS();
         return lcsArray;
     }
 
@@ -103,6 +104,7 @@ public class LCS_A<T extends Comparable> {
     }
 
     public void setList2(List<T> list2) {
+        init();
         this.list2 = list2;
     }
 }

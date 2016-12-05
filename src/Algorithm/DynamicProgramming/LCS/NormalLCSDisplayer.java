@@ -1,4 +1,4 @@
-package Algorithm.DynamicProgramming.LCS;
+package Algorithm.dynamicProgramming.LCS;
 
 import java.util.List;
 

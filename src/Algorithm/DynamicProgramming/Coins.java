@@ -1,8 +1,6 @@
-package Algorithm.DynamicProgramming;
+package Algorithm.dynamicProgramming;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Set;
 
 /**
  * Created by Zhanghr on 2016/4/8.

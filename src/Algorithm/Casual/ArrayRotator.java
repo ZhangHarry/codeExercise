@@ -1,9 +1,10 @@
-package Algorithm.Casual;
+package Algorithm.casual;
 
 /**
  * Created by Zhanghr on 2016/4/11.
  */
-public class ArrayRotate {
+public class ArrayRotator
+{
 
     public static void rotateL(int[] array, int shift){
         rotate(array, 0, array.length-1, shift, true);

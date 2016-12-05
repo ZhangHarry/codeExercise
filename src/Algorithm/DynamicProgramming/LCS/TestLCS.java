@@ -1,5 +1,6 @@
-package Algorithm.DynamicProgramming.LCS;
+package Algorithm.dynamicProgramming.LCS;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,26 +8,14 @@ import java.util.List;
  * Created by zhanghr on 2016/11/20.
  */
 public class TestLCS {
-    public static void main(String[] args){
-        Grid[][] lcsAray;
+    public static void main(String[] args) throws IOException {
+//        compareFileBytes("E:\\eeWorkspace\\zhonghui\\UnknownEncode\\test\\FileManager0.cs",
+//                "E:\\eeWorkspace\\zhonghui\\UnknownEncode\\test\\FileManager1.cs");
+        transferFile("E:\\eeWorkspace\\zhonghui\\UnknownEncode\\t\\FileManager.cs.rm",
+                "E:\\eeWorkspace\\zhonghui\\UnknownEncode\\t\\FileManager0.cs.cs");
+    }
 
-//        List<Integer> list1 = new ArrayList<>();
-//        list1.add(1);
-//        list1.add(2);
-//        list1.add(3);
-//        list1.add(4);
-//        list1.add(5);
-//        List<Integer> list2 = new ArrayList<>();
-//        list2.add(2);
-//        list2.add(1);
-//        list2.add(2);
-//        list2.add(4);
-//        list2.add(3);
-//        list2.add(4);
-//        list2.add(5);
-//        lcsAray = new LCS<Integer>().getLCS(list1, list2);
-//        LCS.showlcsArray(lcsAray, list1, list2);
-
+    public static void testCase1(){
         List<String> list3 = new ArrayList<>();
         list3.add("A");
         list3.add("B");
@@ -46,4 +35,28 @@ public class TestLCS {
         lcs.showlcsArray();
         lcs.showlcs();
     }
+
+
+
+    public static void transferFile(String srcFileName, String destFileName) throws IOException {
+        String line_separator = System.getProperty("line.separator");
+        FileInputStream fis = new FileInputStream(srcFileName);
+        StringBuffer content = new StringBuffer();
+        DataInputStream in = new DataInputStream(fis);
+        BufferedReader d = new BufferedReader(new InputStreamReader(in, "utf-16"));// , "UTF-8"
+        String line = null;
+        while ((line = d.readLine()) != null) {
+            content.append(line + line_separator);
+            System.out.println(new String(line.getBytes(),"gbk"));
+        }
+        d.close();
+        in.close();
+        fis.close();
+
+        Writer ow = new OutputStreamWriter(new FileOutputStream(destFileName), "utf-8");
+        ow.write(content.toString());
+        ow.close();
+    }
+
+
 }

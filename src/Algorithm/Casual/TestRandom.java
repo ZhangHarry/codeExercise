@@ -1,4 +1,4 @@
-package Algorithm.Casual;
+package Algorithm.casual;
 
 /**
  * Created by Zhanghr on 2016/4/7.

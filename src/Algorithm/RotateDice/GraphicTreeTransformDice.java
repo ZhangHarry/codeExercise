@@ -1,4 +1,4 @@
-package Algorithm.RotateDice;
+package Algorithm.rotateDice;
 
 import util.grapic.Edge;
 import util.grapic.Graph;

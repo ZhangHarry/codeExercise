@@ -1,4 +1,4 @@
-package Algorithm.RotateDice;
+package Algorithm.rotateDice;
 
 /**
  * Created by Zhanghr on 2016/4/27.

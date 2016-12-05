@@ -65,7 +65,7 @@ public class ForkBlur extends RecursiveAction {
     protected void computeDirectly() {
         int sidePixels = (mBlurWidth - 1) / 2;
         for (int index = mStart; index < mStart + mLength; index++) {
-            // Calculate average.
+            // calculate average.
             float rt = 0, gt = 0, bt = 0;
             for (int mi = -sidePixels; mi <= sidePixels; mi++) {
                 int mindex = Math.min(Math.max(mi + index, 0), mSource.length - 1);

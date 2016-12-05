@@ -1,4 +1,4 @@
-package Algorithm.RotateDice;
+package Algorithm.rotateDice;
 
 import java.util.*;
 

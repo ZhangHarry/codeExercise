@@ -3,7 +3,7 @@ package util.tool.score;
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
-import util.Util;
+import util.FileProcesser;
 
 import java.io.File;
 import java.util.HashMap;
@@ -75,7 +75,7 @@ public class Analyzer {
         String fileName = pickFileName(filePath);
         ASTParser parser = ASTParser.newParser(AST.JLS3);
         parser.setResolveBindings(true);
-        parser.setSource(Util.getContent(filePath).toCharArray());
+        parser.setSource(FileProcesser.getContent(filePath).toCharArray());
         parser.setKind(ASTParser.K_COMPILATION_UNIT);
         CompilationUnit result = (CompilationUnit) parser.createAST(null);
         ImportVisitor visitor = new ImportVisitor();
