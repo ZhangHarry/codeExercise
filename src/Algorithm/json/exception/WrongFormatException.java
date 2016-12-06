@@ -1,4 +1,4 @@
-package Algorithm.json;
+package Algorithm.json.exception;
 
 /**
  * Created by zhanghr on 2016/12/3.

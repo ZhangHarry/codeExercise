@@ -1,7 +1,9 @@
 package Algorithm.json;
 
+import Algorithm.json.core.linear.JsonParser;
+import Algorithm.json.exception.WrongFormatException;
 import Algorithm.json.object.JsonBaseObject;
-import Algorithm.json.object.JsonDisplayer;
+import Algorithm.json.displayer.JsonDisplayer;
 
 /**
  * Created by zhanghr on 2016/12/5.
@@ -9,7 +11,8 @@ import Algorithm.json.object.JsonDisplayer;
 public class TestJsonParser {
     public static void main(String[] args){
         JsonParser parser = new JsonParser();
-        String input = "[{k:v,\"k3\":v3, \"2k4\": \"242\"},{k2:2},[{k3:4}]]";
+        String input = "[{\"钥匙\":\"值\",\"k3\":v3, \"2k4\": \"242\"},{k2 :  \n" +
+                "-2e34},[{k3:4}]]";
         try {
             JsonBaseObject json = parser.parse(input.getBytes());
             JsonDisplayer.display(json);

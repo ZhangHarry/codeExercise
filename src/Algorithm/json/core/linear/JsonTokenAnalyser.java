@@ -1,9 +1,12 @@
-package Algorithm.json;
+package Algorithm.json.core.linear;
 
+import Algorithm.json.exception.WrongFormatException;
 import Algorithm.json.token.NumberToken;
 import Algorithm.json.token.QuoteToken;
 import Algorithm.json.token.StringToken;
 import Algorithm.json.token.Token;
+import Algorithm.json.util.Constant;
+import Algorithm.json.util.JsonDefinition;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,13 +14,13 @@ import java.util.List;
 /**
  * Created by zhanghr on 2016/12/4.
  */
-public class TokenAnalyser {
+public class JsonTokenAnalyser {
     int position;
     Byte currByte;
     byte[] input;
     List<Token> tokens ;
 
-    public TokenAnalyser(byte[] input) {
+    public JsonTokenAnalyser(byte[] input) {
         init(input);
     }
 
@@ -61,12 +64,18 @@ public class TokenAnalyser {
         skipSpace();
         Token token = Constant.map.get(currByte);
         if (token == null){
-            if (isStringHeader(currByte)) {
+            if (JsonDefinition.isNameHeader(currByte)) {
                 token = readStringToken();
-            }else if (isDigit(currByte)){
+            }else if (JsonDefinition.isNumberHeader(currByte)){
                 token= readNumberToken();
-            }else
-                throw new WrongFormatException(String.format("unexpected character : %s", currByte));
+            }else {
+                if (currByte < 0)
+                    throw new WrongFormatException(String.format("whether you have used not-ASCII char? If so, please add '\"'." +
+                            "unexpected byte : %s", currByte));
+                else
+                    throw new WrongFormatException(String.format("unexpected character : '%s', maybe your string starts with an invalid character, please add '\"'. ",
+                            new String(new byte[]{currByte})));
+            }
         }else if (token instanceof QuoteToken){
             token = readQuoteToken();
         }else {
@@ -94,19 +103,24 @@ public class TokenAnalyser {
             position++;
             return token;
         }else
-            throw new WrongFormatException(String.format("lack of %s at %d", Constant.QUOTE, position-1));
+            throw new WrongFormatException(String.format("lack of '%s' at %d", Constant.QUOTE_STR, position-1));
     }
 
-    private Token readNumberToken() {
+    private Token readNumberToken() throws WrongFormatException {
         int start = position;
         do{
             position++;
-        }while (hasNext() && (isNumber((currByte = input[position]))));
+        }while (hasNext() && (JsonDefinition.isNumber((currByte = input[position]))));
         int end = position;
-        Token token = new NumberToken(new String(input, start, end-start));
+        String numberStr =new String(input, start, end-start);
+        if (!JsonDefinition.isValidJsonNumber(numberStr))
+            throw new WrongFormatException(String.format("invalid digit number : '%s', please modify it or use string. ",
+                   numberStr));
+        Token token = new NumberToken(numberStr);
         token.setPosition(start);
         return token;
     }
+
 
     /**
      * 这里的String指的是一般编程语言里有效的变量名，即以字母、美元符号或下划线开头，后面跟字母、下划线、数字、美元符号
@@ -117,35 +131,11 @@ public class TokenAnalyser {
         int start = position;
         do{
             position++;
-        } while (hasNext() && isString((currByte = input[position])));
+        } while (hasNext() && JsonDefinition.isName((currByte = input[position])));
         int end = position;
         Token token = new StringToken(new String(input, start, end-start));
         token.setPosition(start);
         return token;
-    }
-
-    private boolean isNumber(Byte currByte) {
-        if (isDigit(currByte) || currByte-(byte)('.')==0)
-            return true;
-        return false;
-    }
-
-    private boolean isString(Byte currByte) {
-        return isStringHeader(currByte) || isDigit(currByte);
-    }
-
-    private boolean isDigit(Byte currByte) {
-        if ( (currByte.compareTo((byte)('0')) >=0 && currByte.compareTo((byte)('9')) <=0 ))
-            return true;
-        return false;
-    }
-
-    private boolean isStringHeader(Byte currByte) {
-        if ( (currByte.compareTo((byte)'a') >=0 && currByte.compareTo((byte)('z')) <=0 ) ||
-                (currByte.compareTo((byte)('A')) >=0 && currByte.compareTo((byte)('Z')) <=0 ) ||
-                (currByte.compareTo((byte)('_'))) == 0 ||(currByte.compareTo((byte)('$'))) == 0)
-            return true;
-        return false;
     }
 
 }

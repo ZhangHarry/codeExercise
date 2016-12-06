@@ -1,7 +1,9 @@
 package util.grapic;
 
 import util.CmdExecutor;
+import util.FileProcesser;
 
+import java.io.File;
 import java.io.PrintWriter;
 import java.util.List;
 
@@ -13,7 +15,7 @@ public class GraphWriter {
         if (g == null || filePath == null){
             return;
         }
-
+        FileProcesser.createFileParent(new File(filePath));
         PrintWriter out = null;
         try {
             out = new PrintWriter(filePath);

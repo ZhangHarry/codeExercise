@@ -1,4 +1,4 @@
-package Algorithm.json;
+package Algorithm.json.util;
 
 import Algorithm.json.token.*;
 
@@ -19,6 +19,14 @@ public class Constant {
     public static final Byte SPACE2 = '\r';
     public static final Byte SPACE3 = '\t';
     public static final Byte RT = '\n';
+    public static final String OPENING_BRACE_STR = new String(new byte[]{'{'});
+    public static final String CLOSING_BRACE_STR = new String(new byte[]{'}'});
+    public static final String OPENING_BRACKET_STR = new String(new byte[]{'['});
+    public static final String CLOSING_BRACKET_STR = new String(new byte[]{']'});
+    public static final String COMMA_STR = new String(new byte[]{','});
+    public static final String COLON_STR = new String(new byte[]{':'});
+    public static final String QUOTE_STR = new String(new byte[]{'"'});
+
     public static HashMap<Byte, Token> map = new HashMap<>();
     static {
         map.put(OPENING_BRACE, new OpeningBraceToken());

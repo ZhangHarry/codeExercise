@@ -1,6 +1,7 @@
 package util;
 
 import java.io.*;
+import java.util.Collection;
 
 /**
  * Created by zhanghr on 2016/8/6.
@@ -36,7 +37,7 @@ public class FileProcesser {
     }
 
     /**
-     * ×ª»»ÎÄ¼þ±àÂë
+     * è½¬æ¢æ–‡ä»¶ç¼–ç 
      * @param srcFileName
      * @param destFileName
      * @param srcEncoding
@@ -59,5 +60,48 @@ public class FileProcesser {
         Writer ow = new OutputStreamWriter(new FileOutputStream(destFileName), destEncoding);
         ow.write(content.toString());
         ow.close();
+    }
+
+
+    public static void delFSFiles(File destPath) {
+        if (destPath.isFile()) {
+            destPath.delete();
+        }else {
+            File[] children = destPath.listFiles();
+            if (children!= null && children.length > 0) {
+                for (File file : children) {
+                    delFSFiles(file);
+                }
+            }
+            destPath.delete();
+        }
+
+    }
+
+    public static void travelFSFiles(File destPath, Collection<String> entries) {
+        if (destPath.isFile()) {
+            entries.add(destPath.getAbsolutePath());
+        }else if (destPath.isDirectory()) {
+            File[] children = destPath.listFiles();
+            for (File file : children) {
+                travelFSFiles(file, entries);
+            }
+        }
+    }
+
+    public static  void travelFSDirs(File destPath, Collection<String> entries) {
+        if (destPath.isDirectory()) {
+            entries.add(destPath.getAbsolutePath());
+            File[] children = destPath.listFiles();
+            for (File file : children) {
+                travelFSFiles(file, entries);
+            }
+        }
+    }
+
+    public static void createFileParent(File file) {
+        if (!file.getParentFile().exists()) {
+            file.getParentFile().mkdirs();
+        }
     }
 }

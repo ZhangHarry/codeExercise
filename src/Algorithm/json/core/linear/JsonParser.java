@@ -1,10 +1,12 @@
-package Algorithm.json;
+package Algorithm.json.core.linear;
 
+import Algorithm.json.displayer.TokenDisplayer;
+import Algorithm.json.exception.WrongFormatException;
 import Algorithm.json.object.JsonArray;
 import Algorithm.json.object.JsonBaseObject;
-import Algorithm.json.object.JsonDisplayer;
 import Algorithm.json.object.JsonObject;
 import Algorithm.json.token.*;
+import Algorithm.json.util.JsonDefinition;
 
 import java.util.List;
 
@@ -16,7 +18,7 @@ public class JsonParser {
     List<Token> tokens ;
 
     public JsonBaseObject parse(byte[] input) throws WrongFormatException, IllegalAccessException, InstantiationException {
-        tokens = new TokenAnalyser(input).tokenAnalyse();
+        tokens = new JsonTokenAnalyser(input).tokenAnalyse();
         TokenDisplayer.display(input, tokens);
         Token token;
         JsonBaseObject json = null;
@@ -53,11 +55,11 @@ public class JsonParser {
                     readPropertyPair(token.getLabel(), object);
                     if ((token = getNextToken()) instanceof CommaToken) //跳过逗号往前
                         token = getNextToken();
-                    else if (token instanceof ClosingBraceToken){
+                    else if (token instanceof ClosingBraceToken){ // 结束
                         goon = false;
                     }else {
-                        throw new WrongFormatException(String.format("expect '%s' or '%s' at %d '%s'", new CommaToken().getLabel(),
-                                new ClosingBraceToken().getLabel(), token.getPosition(), token.getSymbol()));
+                        throw new WrongFormatException(String.format("expect '%s' or '%s' at %d '%s'",
+                                new CommaToken().getLabel(), new ClosingBraceToken().getLabel(), token.getPosition(), token.getSymbol()));
                     }
                 }
             }
@@ -76,12 +78,13 @@ public class JsonParser {
             if (token instanceof VarToken) {
                 String value = token.getLabel();
                 if (token instanceof NumberToken){
-                    if (value.contains(".")) {
-                        object.addParameter(key, Double.parseDouble(value));
-                    }else {
-                        Integer integer = Integer.parseInt(value);
-                        object.addParameter(key, integer);
-                    }
+                    object.addParameter(key, JsonDefinition.parseNumber(value));
+//                    if (value.contains(".")) {
+//                        object.addParameter(key, Double.parseDouble(value));
+//                    }else {
+//                        Integer integer = Integer.parseInt(value);
+//                        object.addParameter(key, integer);
+//                    }
                 }else
                     object.addParameter(key, value);
             } else if (token instanceof OpeningBraceToken) {

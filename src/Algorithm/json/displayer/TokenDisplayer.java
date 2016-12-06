@@ -1,4 +1,6 @@
-package Algorithm.json.token;
+package Algorithm.json.displayer;
+
+import Algorithm.json.token.Token;
 
 import java.util.List;
 
