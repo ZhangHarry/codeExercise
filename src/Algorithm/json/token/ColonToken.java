@@ -8,7 +8,7 @@ import Algorithm.json.util.Constant;
 public class ColonToken extends Token {
 
     public ColonToken() {
-        this.nextTokens.add(StringToken.class);
+        this.nextTokens.add(NameToken.class);
         this.symbol = Constant.COLON;
         this.label = new String(new byte[]{symbol});
     }

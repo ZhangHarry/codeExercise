@@ -1,5 +1,7 @@
 package Algorithm.json.util;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -42,6 +44,27 @@ public class JsonDefinition {
                 return true;
         }
         return false;
+    }
+
+    public static boolean isTrue(String s) {
+        if (s.equals("true"))
+            return true;
+        else
+            return false;
+    }
+
+    public static boolean isFalse(String s) {
+        if (s.equals("false"))
+            return true;
+        else
+            return false;
+    }
+
+    public static boolean isNul(String s) {
+        if (s.equals("null"))
+            return true;
+        else
+            return false;
     }
 
     public static void main(String[] args){

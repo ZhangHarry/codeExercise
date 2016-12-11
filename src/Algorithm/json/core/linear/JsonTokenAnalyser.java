@@ -1,10 +1,7 @@
 package Algorithm.json.core.linear;
 
 import Algorithm.json.exception.WrongFormatException;
-import Algorithm.json.token.NumberToken;
-import Algorithm.json.token.QuoteToken;
-import Algorithm.json.token.StringToken;
-import Algorithm.json.token.Token;
+import Algorithm.json.token.*;
 import Algorithm.json.util.Constant;
 import Algorithm.json.util.JsonDefinition;
 
@@ -98,7 +95,7 @@ public class JsonTokenAnalyser {
         }while (hasNext() && ((currByte = input[position]) - Constant.QUOTE != 0));
         int end = position;
         if (currByte - Constant.QUOTE == 0) {
-            Token token = new StringToken(new String(input, start, end - start));
+            Token token = new NameToken(new String(input, start, end - start));
             token.setPosition(start);
             position++;
             return token;
@@ -133,7 +130,7 @@ public class JsonTokenAnalyser {
             position++;
         } while (hasNext() && JsonDefinition.isName((currByte = input[position])));
         int end = position;
-        Token token = new StringToken(new String(input, start, end-start));
+        Token token = new NameToken(new String(input, start, end-start));
         token.setPosition(start);
         return token;
     }

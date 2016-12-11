@@ -46,10 +46,10 @@ public class JsonParser {
             token = getNextToken();
             if (token instanceof ClosingBraceToken) // finish
                 ;
-            else if (token instanceof StringToken){ // 一个属性对
+            else if (token instanceof NameToken){ // 一个属性对
                 boolean goon = true;
                 while (goon) {
-                    if (!(token instanceof StringToken)) {// 需要属性对
+                    if (!(token instanceof NameToken)) {// 需要属性对
                         throw new WrongFormatException(String.format("expect %s at %d '%s'", "valid (key:value) pair", token.getPosition(), token.getSymbol()));
                     }
                     readPropertyPair(token.getLabel(), object);
@@ -79,12 +79,6 @@ public class JsonParser {
                 String value = token.getLabel();
                 if (token instanceof NumberToken){
                     object.addParameter(key, JsonDefinition.parseNumber(value));
-//                    if (value.contains(".")) {
-//                        object.addParameter(key, Double.parseDouble(value));
-//                    }else {
-//                        Integer integer = Integer.parseInt(value);
-//                        object.addParameter(key, integer);
-//                    }
                 }else
                     object.addParameter(key, value);
             } else if (token instanceof OpeningBraceToken) {

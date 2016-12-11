@@ -3,8 +3,8 @@ package Algorithm.json.token;
 /**
  * Created by zhanghr on 2016/12/3.
  */
-public class StringToken extends VarToken {
-    public StringToken(String label) {
+public class NameToken extends VarToken {
+    public NameToken(String label) {
         this.symbol = (byte)label.charAt(0);
         this.label = label;
         this.nextTokens.add(ColonToken.class);

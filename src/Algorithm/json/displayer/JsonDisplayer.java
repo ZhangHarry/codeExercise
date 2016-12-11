@@ -25,7 +25,7 @@ public class JsonDisplayer {
     }
 
     private static void displayJsonObj(JsonObject object, String spaces, String space) {
-        System.out.println(spaces+"Json object--------");
+        System.out.println(spaces+"Json object--------------------");
         String newSpace = spaces+space;
         Collection<String> keys = object.keys();
         Iterator<String> it = keys.iterator();
@@ -36,7 +36,7 @@ public class JsonDisplayer {
     }
 
     private static void displayJsonArray(JsonArray array, String spaces, String space) {
-        System.out.println(spaces+"Json array-------------------");
+        System.out.println(spaces+"Json array");
         String newSpace = spaces+space;
         int size = array.size();
         for (int i = 0; i < size; i++) {
