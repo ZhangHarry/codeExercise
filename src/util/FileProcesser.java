@@ -104,4 +104,15 @@ public class FileProcesser {
             file.getParentFile().mkdirs();
         }
     }
+
+    public static void saveFile(String fileName, String content){
+        PrintWriter pw = null;
+        try {
+            pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream(fileName)),true);
+            pw.println(content);
+            pw.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 }

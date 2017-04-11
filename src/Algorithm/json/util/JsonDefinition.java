@@ -60,7 +60,7 @@ public class JsonDefinition {
             return false;
     }
 
-    public static boolean isNul(String s) {
+    public static boolean isNull(String s) {
         if (s.equals("null"))
             return true;
         else

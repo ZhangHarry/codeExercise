@@ -5,8 +5,6 @@ package Algorithm.json.token;
  */
 public class NumberToken extends VarToken {
     public NumberToken(String label) {
-        this.symbol = '\0';
-        this.label = label;
-        this.nextTokens.add(CommaToken.class);
+        super(label);
     }
 }

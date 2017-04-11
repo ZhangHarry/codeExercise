@@ -95,7 +95,7 @@ public class JsonTokenAnalyser {
         }while (hasNext() && ((currByte = input[position]) - Constant.QUOTE != 0));
         int end = position;
         if (currByte - Constant.QUOTE == 0) {
-            Token token = new NameToken(new String(input, start, end - start));
+            Token token = new StringToken(new String(input, start, end - start));
             token.setPosition(start);
             position++;
             return token;
@@ -130,7 +130,7 @@ public class JsonTokenAnalyser {
             position++;
         } while (hasNext() && JsonDefinition.isName((currByte = input[position])));
         int end = position;
-        Token token = new NameToken(new String(input, start, end-start));
+        Token token = new StringToken(new String(input, start, end-start));
         token.setPosition(start);
         return token;
     }

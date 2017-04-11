@@ -9,7 +9,7 @@ public class OpeningBraceToken extends Token {
 
     public OpeningBraceToken() {
         this.nextTokens.add(ClosingBraceToken.class);
-        this.nextTokens.add(NameToken.class);
+        this.nextTokens.add(StringToken.class);
         this.symbol = Constant.OPENING_BRACE;
         this.label = new String(new byte[]{symbol});
     }
