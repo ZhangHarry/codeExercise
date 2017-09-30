@@ -2,42 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676115a0-8488-4654-9fa5-ee6cf77db810" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/json/token/BooleanToken.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/others/Code0.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/finished/Code1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/finished/Code101.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/finished/Code22.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/finished/Code24.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/finished/Code258.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/unfinished/Code260.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/finished/Code263.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/unfinished/Code316.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/unfinished/Code316_2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/unfinished/Code327.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/finished/Code337.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/finished/Code357.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/finished/Code378.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/unfinished/Code48.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/dynamicProgramming/BST/Construct.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/crawle/Crawler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/util/Filter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/dynamicProgramming/BST/Node.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/json/token/NullToken.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/util/Parser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/others/PushPop.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/finished/TreeNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/unfinished/TreeNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithm/json/token/ColonToken.java" afterPath="$PROJECT_DIR$/src/Algorithm/json/token/ColonToken.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/FileProcesser.java" afterPath="$PROJECT_DIR$/src/util/FileProcesser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithm/json/util/JsonDefinition.java" afterPath="$PROJECT_DIR$/src/Algorithm/json/util/JsonDefinition.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithm/json/core/linear/JsonParser.java" afterPath="$PROJECT_DIR$/src/Algorithm/json/core/linear/JsonParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithm/json/core/linear/JsonTokenAnalyser.java" afterPath="$PROJECT_DIR$/src/Algorithm/json/core/linear/JsonTokenAnalyser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithm/json/token/NumberToken.java" afterPath="$PROJECT_DIR$/src/Algorithm/json/token/NumberToken.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithm/json/token/OpeningBraceToken.java" afterPath="$PROJECT_DIR$/src/Algorithm/json/token/OpeningBraceToken.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithm/json/token/VarToken.java" afterPath="$PROJECT_DIR$/src/Algorithm/json/token/VarToken.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/crawle/Car.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/crawle/CrawlerMIIT.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/others/NodeParent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algorithm/leetcode/others/Code0.java" afterPath="$PROJECT_DIR$/src/Algorithm/leetcode/others/Code0.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\workspace\codeExercise\src\Algorithm\casual\BST.java" afterPath="$PROJECT_DIR$/src/Algorithm/dynamicProgramming/BST/BST.java" />
-      <change type="MOVED" beforePath="E:\workspace\codeExercise\src\Algorithm\json\token\NameToken.java" afterPath="$PROJECT_DIR$/src/Algorithm/json/token/StringToken.java" />
     </list>
     <ignored path="codeExercise.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,21 +42,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Code0.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algorithm/leetcode/others/Code0.java">
+      <file leaf-file-name="CrawlerMIIT.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Algorithm/crawle/CrawlerMIIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.2913669">
+              <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PushPop.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Algorithm/leetcode/others/PushPop.java">
+      <file leaf-file-name="Car.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Algorithm/crawle/Car.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.639854">
-              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -118,9 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Algorithm/json/core/linear/JsonTokenAnalyser.java" />
-        <option value="$PROJECT_DIR$/src/Algorithm/json/token/NameToken.java" />
-        <option value="$PROJECT_DIR$/src/Algorithm/json/util/JsonDefinition.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/json/token/VarToken.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/json/token/NumberToken.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/json/token/BooleanToken.java" />
@@ -167,8 +133,11 @@
         <option value="$PROJECT_DIR$/src/Algorithm/crawle/Crawler.java" />
         <option value="$PROJECT_DIR$/src/util/Filter.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/leetcode/finished/Code0.java" />
-        <option value="$PROJECT_DIR$/src/Algorithm/leetcode/others/Code0.java" />
         <option value="$PROJECT_DIR$/src/Algorithm/leetcode/others/PushPop.java" />
+        <option value="$PROJECT_DIR$/src/Algorithm/leetcode/others/Code0.java" />
+        <option value="$PROJECT_DIR$/src/Algorithm/leetcode/others/NodeParent.java" />
+        <option value="$PROJECT_DIR$/src/Algorithm/crawle/Car.java" />
+        <option value="$PROJECT_DIR$/src/Algorithm/crawle/CrawlerMIIT.java" />
       </list>
     </option>
   </component>
@@ -191,10 +160,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1358" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -221,11 +190,11 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JPF/jpf-demo/JPF_Proj" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -254,72 +223,13 @@
       <recent name="Algorithm.util.graph" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Algorithm.crawle" />
       <recent name="Algorithm.leetcode.unfinished" />
       <recent name="Algorithm.leetcode" />
       <recent name="Algorithm.DynamicProgramming.LCS" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PushPop">
-    <configuration default="false" name="Code260" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Algorithm.leetcode.unfinished.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Algorithm.leetcode.unfinished.Code260" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="codeExercise" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Code22" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Algorithm.leetcode.unfinished.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Algorithm.leetcode.finished.Code22" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="codeExercise" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Crawler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Algorithm.crawle.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Algorithm.crawle.Crawler" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="codeExercise" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.CrawlerMIIT">
     <configuration default="false" name="Filter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -348,6 +258,66 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="Algorithm.leetcode.others.PushPop" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="codeExercise" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Code0" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Algorithm.leetcode.others.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Algorithm.leetcode.others.Code0" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="codeExercise" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="NodeParent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Algorithm.leetcode.others.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Algorithm.leetcode.others.NodeParent" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="codeExercise" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="CrawlerMIIT" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Algorithm.crawle.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Algorithm.crawle.CrawlerMIIT" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -786,19 +756,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Code260" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Code22" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Crawler" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Filter" />
-      <item index="4" class="java.lang.String" itemvalue="Application.PushPop" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Filter" />
+      <item index="1" class="java.lang.String" itemvalue="Application.PushPop" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Code0" />
+      <item index="3" class="java.lang.String" itemvalue="Application.NodeParent" />
+      <item index="4" class="java.lang.String" itemvalue="Application.CrawlerMIIT" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.PushPop" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Filter" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Crawler" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Code22" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Code260" />
+        <item index="0" class="java.lang.String" itemvalue="Application.CrawlerMIIT" />
+        <item index="1" class="java.lang.String" itemvalue="Application.NodeParent" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Code0" />
+        <item index="3" class="java.lang.String" itemvalue="Application.PushPop" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Filter" />
       </list>
     </recent_temporary>
   </component>
@@ -878,7 +848,12 @@
       <workItem from="1491502774390" duration="2916000" />
       <workItem from="1491529397003" duration="2288000" />
       <workItem from="1491833862975" duration="1783000" />
-      <workItem from="1491892828846" duration="18922000" />
+      <workItem from="1491892828846" duration="22958000" />
+      <workItem from="1492007966770" duration="8143000" />
+      <workItem from="1492094389454" duration="990000" />
+      <workItem from="1492257413983" duration="631000" />
+      <workItem from="1492281657253" duration="17867000" />
+      <workItem from="1492583886410" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="install maven jar version-0.0.1">
       <created>1469362906132</created>
@@ -890,36 +865,36 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="364242000" />
+    <option name="totallyTimeSpent" value="395945000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44816053" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35785952" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16111952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24191968" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20347957" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44147158" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.73333335" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32664436" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.853012" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1381,6 +1356,24 @@
           <properties />
           <option name="timeStamp" value="341" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Algorithm/leetcode/others/Code0.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="409" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Algorithm/leetcode/others/Code0.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="418" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Algorithm/crawle/CrawlerMIIT.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="421" />
+        </line-breakpoint>
         <line-breakpoint type="java-field">
           <url>jar://D:/Java/jdk1.8.0_92/src.zip!/java/util/regex/Pattern.java</url>
           <line>3820</line>
@@ -1391,7 +1384,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="395" />
+      <option name="time" value="422" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1406,34 +1399,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Java/jdk1.8.0_45/src.zip!/java/lang/NumberFormatException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_45/src.zip!/java/lang/Byte.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="146" column="32" selection-start-line="146" selection-start-column="23" selection-end-line="146" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/json/displayer/JsonDisplayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7284173">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/json/token/ColonToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32014388">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithm/json/token/Token.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1734,16 +1699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/crawle/Crawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55990785">
-          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/Filter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1755,7 +1710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="97" column="26" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1763,7 +1717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="216" column="6" selection-start-line="216" selection-start-column="6" selection-end-line="216" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1771,22 +1724,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="306" column="12" selection-start-line="306" selection-start-column="12" selection-end-line="306" selection-end-column="12" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/leetcode/others/PushPop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="59" selection-start-line="115" selection-start-column="59" selection-end-line="115" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithm/leetcode/others/Code0.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <caret line="106" column="9" selection-start-line="87" selection-start-column="31" selection-end-line="106" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3038#3039#0" expanded="false" />
+            <element signature="e#3061#3062#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/leetcode/others/NodeParent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/crawle/Crawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithm/leetcode/others/PushPop.java">
+    <entry file="jar://D:/Java/jdk1.8.0_45/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.639854">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/crawle/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm/crawle/CrawlerMIIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2913669">
+          <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
           <folding />
         </state>
       </provider>
