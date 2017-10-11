@@ -45,10 +45,35 @@ public class Code583 {
 		return length1-size+length2-size;
 	}
 	
+	/**
+	 * beat 35%, 70ms
+	 * @param word1
+	 * @param word2
+	 * @return
+	 */
+	public int minDistance1(String word1, String word2) {
+		int length1 =word1.length(), length2 = word2.length();
+		int[][] matrix = new int[length1+1][length2+1];		
+		for(int i = length1-1; i>=0;i--){
+			char c = word1.charAt(i);
+			for(int j = length2-1; j>=0;j--){
+				if (c == word2.charAt(j)) {
+					matrix[i][j] = 1 + matrix[i+1][j+1];
+				}else {
+					matrix[i][j] =  Math.max( matrix[i+1][j], matrix[i][j+1]);
+				}
+			}
+		}
+		Printer.print(matrix);
+		
+		int size = matrix[0][0];
+		return length1-size+length2-size;
+	}
+	
 	public static void main(String[] args) {
 		Code583 code583 = new Code583();
 		String word1 = "sea", word2 = "eat";
-		int result = code583.minDistance(word1, word2), predict = 2;
+		int result = code583.minDistance1(word1, word2), predict = 2;
 		System.out.println(result + " "+ predict + " "+ (result == predict));
 	}
 	
