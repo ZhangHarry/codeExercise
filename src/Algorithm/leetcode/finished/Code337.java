@@ -2,6 +2,8 @@ package Algorithm.leetcode.finished;
 
 import java.util.HashMap;
 
+import Algorithm.leetcode.util.TreeNode;
+
 /**
  * The thief has found himself a new place for his thievery again.
  * There is only one entrance to this area, called the "root."
