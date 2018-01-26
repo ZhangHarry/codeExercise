@@ -38,10 +38,28 @@ public class Code258 {
                 return oneth+tenth-9;
         }
     }
+    
+    /**
+     * beat 16.37%
+     * @param num
+     * @return
+     */
+    public int addDigits2(int num) {
+    	if (num < 10) {
+			return num;
+		}else {
+			int rest = num % 9;
+			if (rest == 0) {
+				return 9;
+			}else {
+				return rest;
+			}
+		}
+    }
 
     public static void main(String[] args){
-        System.out.println(new Code258().addDigits(25));
-        System.out.println(new Code258().addDigits(125));
-        System.out.println(new Code258().addDigits(90));
+        System.out.println(new Code258().addDigits2(25));
+        System.out.println(new Code258().addDigits2(125));
+        System.out.println(new Code258().addDigits2(90));
     }
 }

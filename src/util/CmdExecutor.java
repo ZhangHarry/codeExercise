@@ -8,19 +8,21 @@ import java.io.InputStreamReader;
  * Created by Zhanghr on 2016/5/31.
  */
 public class CmdExecutor {
-    public static void exec(String cmd){
+	public static void exec(String cmd){
 
         System.out.format("cmd : %s%n",cmd);
         Runtime run = Runtime.getRuntime();
+        if (getOSType().equals("windows"))
+            cmd = "cmd.exe /c " + cmd;
         try {
-            Process process = run.exec("cmd.exe /c " + cmd);
+            Process process = run.exec(cmd);
             InputStream is = process.getInputStream();
-            InputStreamReader isr = new InputStreamReader(is, "utf-8");
+            InputStreamReader isr = new InputStreamReader(is, "gbk");
             BufferedReader br = new BufferedReader(isr);
             InputStream iserr = process.getErrorStream();
-            InputStreamReader isrerr = new InputStreamReader(iserr, "utf-8");
+            InputStreamReader isrerr = new InputStreamReader(iserr, "gbk");
             BufferedReader brerr = new BufferedReader(isrerr);
-            String s = "";
+            String s;
             while ((s = br.readLine()) != null) {
                 System.out.println(s);
             }
@@ -32,5 +34,17 @@ public class CmdExecutor {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static String getOSType(){
+        String os = System.getProperty("os.name").toLowerCase();
+        if (os.contains("windows"))
+            return "windows";
+        else if (os.contains("linus"))
+            return "linus";
+        else if (os.contains("mac"))
+            return "mac";
+        else
+            return "unKnown";
     }
 }
