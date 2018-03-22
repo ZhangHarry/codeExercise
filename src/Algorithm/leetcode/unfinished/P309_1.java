@@ -1,10 +1,6 @@
 package Algorithm.leetcode.unfinished;
 
-import static org.junit.Assert.*;
-
 import java.util.List;
-
-import org.junit.Test;
 
 import Algorithm.leetcode.util.Printer;
 
@@ -87,64 +83,52 @@ public class P309_1 {
 		return root;
 	}
 
-	@Test
 	public void test0() {
 		P309_1 p = new P309_1();
 		int[] prices = new int[] {};
 		int result = p.maxProfit(prices), predict = 0;
 		System.out.println((result == predict) + String.format(" %d, %d", result, predict));
 		Printer.print(prices);
-		assertEquals(predict, result);
 	}
 
-	@Test
 	public void test1() {
 		P309_1 p = new P309_1();
 		int[] prices = new int[] { 1, 2, 3, 0, 2 };
 		int result = p.maxProfit(prices), predict = 3;
 		System.out.println((result == predict) + String.format(" %d, %d", result, predict));
 		Printer.print(prices);
-		assertEquals(predict, result);
 	}
 
-	@Test
 	public void test2() {
 		P309_1 p = new P309_1();
 		int[] prices = new int[] { 3, 2, 1 };
 		int result = p.maxProfit(prices), predict = 0;
 		System.out.println((result == predict) + String.format(" %d, %d", result, predict));
 		Printer.print(prices);
-		assertEquals(predict, result);
 	}
 
-	@Test
 	public void test3() {
 		P309_1 p = new P309_1();
 		int[] prices = new int[] { 6, 1, 3, 2, 4, 7 };
 		int result = p.maxProfit(prices), predict = 6;
 		System.out.println((result == predict) + String.format(" %d, %d", result, predict));
 		Printer.print(prices);
-		assertEquals(predict, result);
 	}
-	
-	@Test
+
 	public void test4() {
 		P309_1 p = new P309_1();
 		int[] prices = new int[] { 1, 4, 2 };
 		int result = p.maxProfit(prices), predict = 3;
 		System.out.println((result == predict) + String.format(" %d, %d", result, predict));
 		Printer.print(prices);
-		assertEquals(predict, result);
 	}
-	
-	@Test
+
 	public void test5() {
 		P309_1 p = new P309_1();
 		int[] prices = new int[] { 2,6,8,7,8,7,9,4,1,2,4,5,8 };
 		int result = p.maxProfit(prices), predict = 15;
 		System.out.println((result == predict) + String.format(" %d, %d", result, predict));
 		Printer.print(prices);
-		assertEquals(predict, result);
 	}
 
 	class Pair {

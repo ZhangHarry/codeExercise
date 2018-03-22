@@ -2,8 +2,6 @@ package Algorithm.leetcode.finished;
 
 import java.util.Arrays;
 
-import org.junit.Test;
-
 import com.sun.org.apache.bcel.internal.classfile.Code;
 
 import Algorithm.leetcode.util.Printer;
@@ -44,8 +42,7 @@ public class Code279 {
 		Printer.print(dp);
 		return dp[n];
 	}
-	
-	@Test
+
 	public void test0(){
 		Code279.numSquares(4);
 	}
