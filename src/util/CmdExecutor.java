@@ -3,6 +3,8 @@ package util;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by Zhanghr on 2016/5/31.
@@ -46,5 +48,17 @@ public class CmdExecutor {
             return "mac";
         else
             return "unKnown";
+    }
+    
+    public static void runJava(String className, String classPath, List<String> args){
+    	List<String> params = new LinkedList<>();
+    	params.add("java");
+    	params.add("-cp");
+    	params.add(classPath);
+    	params.add(className);
+    	params.addAll(args);
+    	String cmd = String.join(" ", params);
+    	exec(cmd);
+    	
     }
 }

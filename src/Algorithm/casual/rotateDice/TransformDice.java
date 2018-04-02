@@ -1,4 +1,4 @@
-package Algorithm.rotateDice;
+package Algorithm.casual.rotateDice;
 
 import java.util.*;
 

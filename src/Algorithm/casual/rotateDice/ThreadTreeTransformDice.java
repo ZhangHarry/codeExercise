@@ -1,4 +1,4 @@
-package Algorithm.rotateDice;
+package Algorithm.casual.rotateDice;
 
 import java.util.ArrayDeque;
 import java.util.Dictionary;
@@ -8,12 +8,12 @@ import java.util.Queue;
 /**
  * Created by zhanghr on 2016/4/28.
  */
-public class DoubleTreeTransformDice {
+public class ThreadTreeTransformDice {
 
     Dice strDice, targetDice;
     Dictionary<String, String> strDictory = new Hashtable<>();
     Dictionary<String, String> targetDictory = new Hashtable<>();
-    public DoubleTreeTransformDice(Dice dice, Dice target){
+    public ThreadTreeTransformDice(Dice dice, Dice target){
         this.strDice = dice;
         this.strDice.transList = "init";
         this.targetDice = target;
@@ -63,7 +63,7 @@ public class DoubleTreeTransformDice {
     public static void main(String[] args){
         String[] start = new String[]{"r","g","g","r","g","r"};
         String[] target = new String[]{"g","g","r","r","g","g"};
-        DoubleTreeTransformDice test = new DoubleTreeTransformDice(new Dice(start), new Dice(target));
+        ThreadTreeTransformDice test = new ThreadTreeTransformDice(new Dice(start), new Dice(target));
         test.searchRotateWay();
     }
 }

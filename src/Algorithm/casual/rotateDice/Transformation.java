@@ -1,4 +1,4 @@
-package Algorithm.rotateDice;
+package Algorithm.casual.rotateDice;
 
 /**
  * Created by Zhanghr on 2016/4/27.
