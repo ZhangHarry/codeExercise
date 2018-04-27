@@ -39,8 +39,10 @@ abstract class SingleProducerSequencerFields extends SingleProducerSequencerPad
     /**
      * Set to -1 as sequence starting point
      */
-    long nextValue = Sequence.INITIAL_VALUE;
-    long cachedValue = Sequence.INITIAL_VALUE;
+    long nextValue = Sequence.INITIAL_VALUE; // 上次生产的sequence
+    long cachedValue = Sequence.INITIAL_VALUE; // 被处理完的Sequence，processor处理完之后才会更新对应的Sequence，
+                                                // 所以现在数组中最小的Sequence一定是被处理过了
+                                                // cachedValue在hasCapacity和next两个方法中为了查看容量都会遍历gatingSequences数组取出最小的那项，然后更新cachedValue的值为这个
 }
 
 /**
@@ -198,6 +200,17 @@ public final class SingleProducerSequencer extends SingleProducerSequencerFields
     }
 
     /**
+     * 过程：
+     * 1、生产者通过Sequencer.next方法申请sequence
+     * 2、生产者在sequence中更新Event
+     * 3、生产者调用Sequencer.publish
+     * 4、消费者通过SequenceBarrier.waitfor(seq)获取sequence， SequenceBarrier.waitfor的主要工作
+     * 4.1、调用WaitStrategy.waitfor(seq)获取availableSeq
+     * 4.2、调用Sequencer.getHighestPublishedSequence(seq, availableSeq)得到真正有效的sequence
+     *
+     * 因为只有一个生产者，所以cursor的更新延迟到publish执行，cursor设置好表示Event必然设置好了（Event设置好后才能调用publish），因为所有sequence都是有效的，所以getHighestPublishedSequence直接返回availableSeq就行
+     * 在多生产者的情况下，cursor的更新在next方法中就已执行，目的是提前占好坑，其他生产者只能取cursor后面，但是Event还没有设置，为了检查Event的设置情况，使用了availableBuffer。
+     * 在publish需要设置availableBuffer的slot，只有设置好的slot代表才对应的seq是有效的，即Event已经设置好，所以getHighestPublishedSequence需要检查availableBuffer的slot，只取出有效的
      * @see Sequencer#publish(long)
      */
     @Override

@@ -29,12 +29,17 @@ public final class WorkProcessor<T>
     implements EventProcessor
 {
     private final AtomicBoolean running = new AtomicBoolean(false);
-    private final Sequence sequence = new Sequence(Sequencer.INITIAL_CURSOR_VALUE);
+    private final Sequence sequence = new Sequence(Sequencer.INITIAL_CURSOR_VALUE); // 已经消费的sequence
     private final RingBuffer<T> ringBuffer;
     private final SequenceBarrier sequenceBarrier;
     private final WorkHandler<? super T> workHandler;
     private final ExceptionHandler<? super T> exceptionHandler;
     private final Sequence workSequence;
+    // 因为消费者共分序列号，为了让不同消费者消费到同一个序列号，所以需要一个共享变量。
+    // 一个线程自旋，将当前sequence设为workSequence，然后通过CAS取到下一个序列号并设置workSequence
+    // 取到序列号后调用barrier.waitfor，然后处理event，但是sequence不会马上被修改，下次需要修改workSequence时再设置sequence，
+    // 如果现在生产者堵塞就可以发现有新空间，可以继续生产。
+
 
     private final EventReleaser eventReleaser = new EventReleaser()
     {

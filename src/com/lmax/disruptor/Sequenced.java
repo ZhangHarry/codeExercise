@@ -4,7 +4,7 @@ public interface Sequenced
 {
     /**
      * The capacity of the data structure to hold entries.
-     *
+     * 数据结果的容量
      * @return the size of the RingBuffer.
      */
     int getBufferSize();
@@ -27,12 +27,13 @@ public interface Sequenced
 
     /**
      * Claim the next event in sequence for publishing.
-     *
+     * 用于发布的下一个event的sequence
      * @return the claimed sequence value
      */
     long next();
 
     /**
+     * 用来发布n个event的sequence，返回的是最大的sequence hi，因此起始的sequence lo=hi-n+1。在batch event producing时被使用。
      * Claim the next n events in sequence for publishing.  This is for batch event producing.  Using batch producing
      * requires a little care and some math.
      * <pre>
@@ -51,6 +52,7 @@ public interface Sequenced
     long next(int n);
 
     /**
+     * 试图返回下一个用于发布event的sequence，如果没有足够的空间会抛出异常，所以这是一个非阻塞方法
      * Attempt to claim the next event in sequence for publishing.  Will return the
      * number of the slot if there is at least <code>requiredCapacity</code> slots
      * available.
@@ -61,6 +63,7 @@ public interface Sequenced
     long tryNext() throws InsufficientCapacityException;
 
     /**
+     * 试图返回下n个用于发布event的sequence，如果没有足够的空间会抛出异常，所以这是一个非阻塞方法
      * Attempt to claim the next n events in sequence for publishing.  Will return the
      * highest numbered slot if there is at least <code>requiredCapacity</code> slots
      * available.  Have a look at {@link Sequencer#next()} for a description on how to
@@ -73,6 +76,7 @@ public interface Sequenced
     long tryNext(int n) throws InsufficientCapacityException;
 
     /**
+     * 发布一个sequence，当event被存储好后调用
      * Publishes a sequence. Call when the event has been filled.
      *
      * @param sequence the sequence to be published.
@@ -80,6 +84,7 @@ public interface Sequenced
     void publish(long sequence);
 
     /**
+     * 批量发布sequence
      * Batch publish sequences.  Called when all of the events have been filled.
      *
      * @param lo first sequence number to publish

@@ -20,6 +20,11 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 import com.lmax.disruptor.util.Util;
 
 /**
+ * Sequence[]包装类的一种实现，核心是AtomicReferenceFieldUpdater类型的域，绑定了SequenceGroup和Sequence[]类型的对象
+ * 在Sequence[]添加一个元素的时候，该方法适合在初始化时使用，进入自旋循环：先取出原始数组的地址，复制到新的数组，再通过AtomicReferenceFieldUpdater的compareAndSet操作将该SequenceGroup对应Sequence[]地址更新为新的地址。
+ * 在Sequence[]删除一个元素的时候，做法类似，不过该方法主体在SequenceGroups中
+ * 添加多个元素会调用SequenceGroups的add方法，该方法更常用
+ *
  * A {@link Sequence} group that can dynamically have {@link Sequence}s added and removed while being
  * thread safe.
  * <p>

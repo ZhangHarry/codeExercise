@@ -21,18 +21,22 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 import com.lmax.disruptor.util.Util;
 
 /**
+ * 单/多sequencer的基本类，提供对gating sequence的管理（增删，实际上会调用SequencerGroups的静态方法处理）、控制当前游标的所有者等常用方法，
+ *
  * Base class for the various sequencer types (single/multi).  Provides
  * common functionality like the management of gating sequences (add/remove) and
  * ownership of the current cursor.
  */
 public abstract class AbstractSequencer implements Sequencer
 {
-    private static final AtomicReferenceFieldUpdater<AbstractSequencer, Sequence[]> SEQUENCE_UPDATER =
+    private static final AtomicReferenceFieldUpdater<AbstractSequencer, Sequence[]> SEQUENCE_UPDATER =  // 通过反射获取AbstractSequencer对象中名字是gatingSequences的域，并通过CAS保证原子更新
         AtomicReferenceFieldUpdater.newUpdater(AbstractSequencer.class, Sequence[].class, "gatingSequences");
 
     protected final int bufferSize;
     protected final WaitStrategy waitStrategy;
-    protected final Sequence cursor = new Sequence(Sequencer.INITIAL_CURSOR_VALUE);
+    protected final Sequence cursor = new Sequence(Sequencer.INITIAL_CURSOR_VALUE); //记录生产最新的序号
+    // 在SingleProducerSequencernext.next()中当发现生产者追上消费者时，直接将cursor设为next+n，（此时因为消费者消费出足够空间后，生产者可以直接将这块都拿到，所以cursor的值已定），
+    // 然后进入自旋等待；但是如果没有追上消费者，cursor不会被设置。因此统一会还在publish方法中设置cursor
     protected volatile Sequence[] gatingSequences = new Sequence[0];
 
     /**

@@ -20,6 +20,7 @@ import java.util.Arrays;
 import com.lmax.disruptor.util.Util;
 
 /**
+ * 虽然是Sequence的继承类，但是实际上包装了一个用final修饰Sequence的数组，只有get方法是可以合法调用的，get方法返回这个数组中的最小值
  * Hides a group of Sequences behind a single Sequence
  */
 public final class FixedSequenceGroup extends Sequence

@@ -36,11 +36,17 @@ public final class MultiProducerSequencer extends AbstractSequencer
     private static final long BASE = UNSAFE.arrayBaseOffset(int[].class);
     private static final long SCALE = UNSAFE.arrayIndexScale(int[].class);
 
-    private final Sequence gatingSequenceCache = new Sequence(Sequencer.INITIAL_CURSOR_VALUE);
+    private final Sequence gatingSequenceCache = new Sequence(Sequencer.INITIAL_CURSOR_VALUE); // 缓存最慢的已消费序号，最新的记录还是要看gatingSequences
 
     // availableBuffer tracks the state of each ringbuffer slot
     // see below for more details on the approach
     private final int[] availableBuffer;
+    // 上面的数组大小就是ring buffer的大小，该数组每个元素代表一个slot，slot存储一个值，slot的index和值都是通过indexMask和indexShift来计算。
+    // 给定一个sequence，低位作为slot的index（实际上就是取模），高位作为slot存的值。
+    // 在setAvailable(seq)中会根据传入seq的值找到对应的slot并设值，该方法会被publish方法调用
+    // getHighestPublishedSequence(low, available)会遍历范围内每个seq，找到对应的slot，检查slot的值是否该seq的高位表示，如果是则检查下一个seq，如果不是返回当前的seq
+    // SequenceBarrier会调用getHighestPublishedSequence来获取可供处理sequence。
+
     private final int indexMask;
     private final int indexShift;
 
@@ -139,7 +145,7 @@ public final class MultiProducerSequencer extends AbstractSequencer
 
                 gatingSequenceCache.set(gatingSequence);
             }
-            else if (cursor.compareAndSet(current, next))
+            else if (cursor.compareAndSet(current, next))  // 获得需要的seq后，更新最新生产序号(cursor)，但是availableBuffer会到publish方法才会更新
             {
                 break;
             }
@@ -219,6 +225,10 @@ public final class MultiProducerSequencer extends AbstractSequencer
     }
 
     /**
+     * 逐个更新availableBuffer中slot的值
+     * 虽然cursor现在已经等于hi（没有其他生产者生产）或大于hi，保证了这个范围不会被之后的生产覆盖，
+     * 在publish调用之前ring buffer中seq对应的Event已经设置完毕，但是availableBuffer slot的值可能没有全部设置好，
+     * 所以Processor取到seq后，还需要检查下availableBuffer slot的值，如果符合表示对应Event必然已经配置后，不符合则不能确定，可能还在publish调用之前的配置阶段
      * @see Sequencer#publish(long, long)
      */
     @Override
