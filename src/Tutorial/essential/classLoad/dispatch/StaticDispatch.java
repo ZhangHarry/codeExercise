@@ -1,17 +1,11 @@
 package Tutorial.essential.classLoad.dispatch;
 
 public class StaticDispatch {
-	static abstract class Human{
-		
-	}
+	static abstract class Human{}
 	
-	static class Man extends Human{
-		
-	}
+	static class Man extends Human{}
 	
-	static class Woman extends Human{
-		
-	}
+	static class Woman extends Human{}
 	
 	public void sayHello(Human human) {
 		System.out.println("hi, human");

@@ -6,7 +6,6 @@ public class DynamicDispatch {
 	}
 	
 	static class Man extends Human{
-
 		@Override
 		protected void sayHello() {
 			System.out.println("hi, man");
@@ -15,7 +14,6 @@ public class DynamicDispatch {
 	}
 	
 	static class Woman extends Human{
-
 		@Override
 		protected void sayHello() {
 			System.out.println("hi, woman");
@@ -25,9 +23,6 @@ public class DynamicDispatch {
 	
 	
 	public static void main(String[] args) {
-		/**
-		 * dynamic dispatch
-		 */
 		Human man = new Man();
 		Human woman = new Woman();
 		man.sayHello();
