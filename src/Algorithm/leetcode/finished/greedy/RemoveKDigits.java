@@ -1,4 +1,4 @@
-package Algorithm.leetcode.finished;
+package Algorithm.leetcode.finished.greedy;
 
 /**
  * 
