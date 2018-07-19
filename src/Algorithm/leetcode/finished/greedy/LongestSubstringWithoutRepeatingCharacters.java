@@ -1,4 +1,4 @@
-package Algorithm.leetcode.finished;
+package Algorithm.leetcode.finished.greedy;
 
 /**
  * Created by zhanghr on 2018/7/12.

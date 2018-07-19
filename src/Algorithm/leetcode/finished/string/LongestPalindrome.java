@@ -1,6 +1,4 @@
-package Algorithm.leetcode.finished;
-
-import java.util.Arrays;
+package Algorithm.leetcode.finished.string;
 
 public class LongestPalindrome {
 	public int longestPalindrome(String s) {
