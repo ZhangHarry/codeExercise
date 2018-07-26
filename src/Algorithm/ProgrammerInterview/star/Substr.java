@@ -66,17 +66,17 @@ class SuffixTree{
         }
         return true;
     }
-}
 
-class Node{
-    char val;
-    List<Node> next =new LinkedList<>();
+    class Node{
+        char val;
+        List<Node> next =new LinkedList<>();
 
-    Node search(char c){
-        for (Node n : next){
-            if (n.val == c)
-                return n;
+        Node search(char c){
+            for (Node n : next){
+                if (n.val == c)
+                    return n;
+            }
+            return null;
         }
-        return null;
     }
 }
