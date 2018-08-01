@@ -1,8 +1,6 @@
 package Algorithm.leetcode.finished;
 
-import Algorithm.leetcode.util.Printer;
-
-import java.util.Arrays;
+import Algorithm.leetcode.util.Tool;
 
 /**
  * Created by zhanghr on 2018/7/12.
@@ -67,6 +65,6 @@ public class RotateImage {
                 new int[]{7,8,9}
         };
         test.rotate(matrix);
-        Printer.print(matrix);
+        Tool.print(matrix);
     }
 }

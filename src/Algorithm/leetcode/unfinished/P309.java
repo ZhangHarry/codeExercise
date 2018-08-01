@@ -1,6 +1,6 @@
 package Algorithm.leetcode.unfinished;
 
-import Algorithm.leetcode.util.Printer;
+import Algorithm.leetcode.util.Tool;
 
 /**
  * Say you have an array for which the ith element is the price of a given stock
@@ -69,8 +69,8 @@ public class P309 {
 		int[] prices = new int[]{};
 		int result = p.maxProfit(prices), predict =0;
 		System.out.println((result == predict) + String.format(" %d, %d", result, predict) );
-		Printer.print(prices);
-		Printer.print(p.store);
+		Tool.print(prices);
+		Tool.print(p.store);
 	}
 
 	public void test1() {
@@ -78,8 +78,8 @@ public class P309 {
 		int[] prices = new int[]{1, 2, 3, 0, 2};
 		int result = p.maxProfit(prices), predict = 3;
 		System.out.println((result == predict) + String.format(" %d, %d", result, predict) );
-		Printer.print(prices);
-		Printer.print(p.store);
+		Tool.print(prices);
+		Tool.print(p.store);
 	}
 
 	public void test2() {
@@ -87,15 +87,15 @@ public class P309 {
 		int[] prices = new int[]{3, 2, 1};
 		int result = p.maxProfit(prices), predict = 0;
 		System.out.println((result == predict) + String.format(" %d, %d", result, predict) );
-		Printer.print(prices);
-		Printer.print(p.store);
+		Tool.print(prices);
+		Tool.print(p.store);
 	}
 	public void test6() {
 		P309 p = new P309();
 		int[] prices = new int[]{6,1,3,2,4,7};
 		int result = p.maxProfit(prices), predict = 6;
 		System.out.println((result == predict) + String.format(" %d, %d", result, predict) );
-		Printer.print(prices);
-		Printer.print(p.store);
+		Tool.print(prices);
+		Tool.print(p.store);
 	}
 }

@@ -1,10 +1,6 @@
 package Algorithm.leetcode.finished;
 
-import java.util.Arrays;
-
-import com.sun.org.apache.bcel.internal.classfile.Code;
-
-import Algorithm.leetcode.util.Printer;
+import Algorithm.leetcode.util.Tool;
 
 
 /**
@@ -33,13 +29,13 @@ public class Code279 {
 		for (int i = 0; i * i <= n; i++) {
 			dp[i * i] = 1;
 		}
-		Printer.print(dp);
+		Tool.print(dp);
 		for (int i = 1; i <= n; i++) {
 			for (int j = 0; i+ j * j <= n; j++) {
 				dp[i + j * j] = Math.min(dp[i + j * j], dp[i] + 1);
 			}
 		}
-		Printer.print(dp);
+		Tool.print(dp);
 		return dp[n];
 	}
 

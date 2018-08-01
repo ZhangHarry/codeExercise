@@ -1,7 +1,5 @@
 package Algorithm.leetcode.finished;
 
-import Algorithm.leetcode.util.Printer;
-
 /**
  * Created by zhanghr on 2018/7/12.
 

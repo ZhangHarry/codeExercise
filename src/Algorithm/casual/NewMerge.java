@@ -1,6 +1,6 @@
 package Algorithm.casual;
 
-import Algorithm.leetcode.util.Printer;
+import Algorithm.leetcode.util.Tool;
 
 /**
  * Created by zhanghr on 2018/7/28.
@@ -37,6 +37,6 @@ public class NewMerge {
         for (int i=n; i<n<<1; i++)
             nums[i] = i*100;
 
-        Printer.print(NewMerge.resort(nums));
+        Tool.print(NewMerge.resort(nums));
     }
 }

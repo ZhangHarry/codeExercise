@@ -1,6 +1,6 @@
 package Algorithm.leetcode.finished;
 
-import Algorithm.leetcode.util.Printer;
+import Algorithm.leetcode.util.Tool;
 
 /**
  * Delete Operation for Two Strings
@@ -31,7 +31,7 @@ public class Code583 {
 				}
 			}
 		}
-		Printer.print(equal);
+		Tool.print(equal);
 		
 		for(int i = length1-1; i>=0;i--){
 			for(int j = length2-1; j>=0;j--){
@@ -39,7 +39,7 @@ public class Code583 {
 						Math.max(equal[i][j] + matrix[i+1][j+1], matrix[i][j+1]));
 			}
 		}
-		Printer.print(matrix);
+		Tool.print(matrix);
 		
 		int size = matrix[0][0];
 		return length1-size+length2-size;
@@ -64,7 +64,7 @@ public class Code583 {
 				}
 			}
 		}
-		Printer.print(matrix);
+		Tool.print(matrix);
 		
 		int size = matrix[0][0];
 		return length1-size+length2-size;

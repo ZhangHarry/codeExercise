@@ -3,7 +3,7 @@ package Algorithm.leetcode.util;
 import java.util.Collection;
 import java.util.Iterator;
 
-public class Printer {
+public class Tool {
 	public static void print(int[][] array) {
 		int length1 = array.length, length2 = array[0].length;
 		System.out.println("==================================================");
@@ -34,5 +34,23 @@ public class Printer {
 			String value = (String) iterator.next();
 			System.out.println(value);				
 		}
+	}
+
+
+	public static int[][] toIntAA(String s){
+		s = s.substring(1);
+		s = s.substring(0, s.length()-2);
+		String[] a = s.split("],");
+		int[][] res = new int[a.length][];
+		for (int i=0;i< a.length; i++){
+			String str = a[i];
+			str = str.substring(1);
+			String[] elements = str.split(",");
+			res[i] = new int[elements.length];
+			for (int j=0;j<elements.length; j++){
+				res[i][j] = Integer.parseInt(elements[j]);
+			}
+		}
+		return res;
 	}
 }
