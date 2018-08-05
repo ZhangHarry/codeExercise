@@ -1,4 +1,4 @@
-package wangyi;
+package company.wangyi;
 
 /**
  * Created by zhanghr on 2018/8/3.

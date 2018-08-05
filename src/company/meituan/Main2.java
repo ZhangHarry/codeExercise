@@ -1,4 +1,4 @@
-package meituan;
+package company.meituan;
 
 
 /**

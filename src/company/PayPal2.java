@@ -1,3 +1,5 @@
+package company;
+
 import java.util.*;
 
 public class PayPal2 {

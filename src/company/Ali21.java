@@ -1,4 +1,4 @@
-/**
+package company; /**
  * 举例：
  输入：
  4

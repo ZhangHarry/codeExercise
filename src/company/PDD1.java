@@ -1,5 +1,5 @@
-import java.util.LinkedList;
-import java.util.List;
+package company;
+
 import java.util.Scanner;
 
 /**
