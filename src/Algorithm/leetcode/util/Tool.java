@@ -38,6 +38,7 @@ public class Tool {
 
 
 	public static int[][] toIntAA(String s){
+		s = s.replace(" ", "");
 		s = s.substring(1);
 		s = s.substring(0, s.length()-2);
 		String[] a = s.split("],");
@@ -45,10 +46,35 @@ public class Tool {
 		for (int i=0;i< a.length; i++){
 			String str = a[i];
 			str = str.substring(1);
+			if (str.length()==0){
+				res[i] = new int[0];
+				continue;
+			}
 			String[] elements = str.split(",");
 			res[i] = new int[elements.length];
 			for (int j=0;j<elements.length; j++){
 				res[i][j] = Integer.parseInt(elements[j]);
+			}
+		}
+		return res;
+	}
+
+	public static char[][] toCharAA(String s){
+		s = s.substring(1);
+		s = s.substring(0, s.length()-2);
+		String[] a = s.split("],");
+		char[][] res = new char[a.length][];
+		for (int i=0;i< a.length; i++){
+			String str = a[i];
+			str = str.substring(1);
+			if (str.length()==0){
+				res[i] = new char[0];
+				continue;
+			}
+			String[] elements = str.split(",");
+			res[i] = new char[elements.length];
+			for (int j=0;j<elements.length; j++){
+				res[i][j] = elements[j].charAt(1);
 			}
 		}
 		return res;

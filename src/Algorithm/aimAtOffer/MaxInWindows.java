@@ -29,7 +29,7 @@ public class MaxInWindows {
             System.out.println("remove : " + r + ", " + queue.size());
             Integer add = num[i++];
             queue.add(add);
-            System.out.println("add : " + add + ", " + queue.size());
+            System.out.println("addNext : " + add + ", " + queue.size());
         }
         list.add(queue.peek());
         return list;

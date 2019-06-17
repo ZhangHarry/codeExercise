@@ -1,4 +1,4 @@
-package company;
+package company.PayPal;
 
 import java.util.HashSet;
 import java.util.Iterator;

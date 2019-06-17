@@ -1,7 +1,7 @@
 package Algorithm.leetcode.finished;
 
 /**
- * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+ * Given an array of integers, return indices of the two numbers such that they addNext up to a specific target.
  * You may assume that each input would have exactly one solution.
  * Created by zhanghr on 2016/12/14.
  */

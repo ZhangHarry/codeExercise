@@ -1,4 +1,4 @@
-package company;
+package company.PDD;
 
 import java.util.Scanner;
 

@@ -64,9 +64,9 @@ class PrefixTree{
     }
 
     class Node{
-        char val;
-        int num=0;
-        HashMap<Character, Node> nexts = new HashMap<>();
+        public char val;
+        public int num=0;
+        public HashMap<Character, Node> nexts = new HashMap<>();
 
         public Node getNext(char n){
             return nexts.get(n);
